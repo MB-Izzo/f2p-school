@@ -10,5 +10,15 @@ namespace F2P.Narrative
         private List<Choice> _choices;
         private List<string> _lines;
         private bool _is_ending;
+
+        public Section(string title)
+        {
+            _title = title;
+        }
+
+        public void AddLine(string line)
+        {
+            _lines.Add(line);
+        }
     }
 }
