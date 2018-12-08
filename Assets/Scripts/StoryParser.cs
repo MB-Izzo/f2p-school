@@ -36,7 +36,6 @@ namespace F2P.Narrative
                 string clean_name = CleanSectionName(result.Value);
                 print(clean_name);
                 section = new Section(clean_name);
-                
             }
 
         }

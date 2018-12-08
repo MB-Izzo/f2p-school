@@ -20,5 +20,10 @@ namespace F2P.Narrative
         {
             _lines.Add(line);
         }
+
+        public void AddChoice(Choice new_choice)
+        {
+            _choices.Add(new_choice);
+        }
     }
 }
