@@ -7,12 +7,47 @@ namespace F2P.Narrative
     public class StoryPlayer : MonoBehaviour
     {
 
-        void Start()
+        private Story _story;
+        private List<string> _curr_passage_lines;
+
+        public System.Action OnCommandTriggered;
+
+        private void Start()
         {
 
         }
 
-        void Update()
+        private void Update()
+        {
+
+        }
+
+        private void SkipSection()
+        {
+
+        }
+
+        private void LoadSection()
+        {
+
+        }
+
+        private void GetNextLine()
+        {
+
+        }
+
+        private void GetChoices()
+        {
+
+        }
+
+        private void Choose(int idx)
+        {
+
+        }
+
+        private void TriggerCommand(string line)
         {
 
         }
