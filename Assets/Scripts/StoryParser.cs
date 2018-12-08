@@ -16,24 +16,29 @@ namespace F2P.Narrative
         private TextAsset _file;
         private string[] _lines;
 
-        private int _curr_line_idx;
+        private int _curr_line_idx = 0;
+
+        private Story _story;
 
         private void Start()
         {
+            _story = new Story();
             _lines = _file.text.Split('\n');
-            CreateSection(_lines[0]);
+            CreateSection(_curr_line_idx);
         }
 
-        private void CreateSection(string line)
+        private void CreateSection(int idx)
         {
             Section section = null;
-            Match result = Regex.Match(line, RegexPatterns.section);
+            Match result = Regex.Match(_lines[idx], RegexPatterns.section);
             if (result.Success)
             {
                 string clean_name = CleanSectionName(result.Value);
                 print(clean_name);
                 section = new Section(clean_name);
+                
             }
+
         }
 
         private string CleanSectionName(string unclean_name)
