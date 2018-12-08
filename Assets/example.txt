@@ -1,0 +1,18 @@
+^^ Passage
+Les joueurs sont autour d'une table.
+* Aller sur le canapé -> Canapé
+* Aller dehors -> Dehors
+
+^^ Dehors
+Les joueurs sont dehors.
+Qui prend le baton?
+* [JOUEUR] -> baton
+
+^^ baton
+-- etat_offensif
+$joueur a ramassé le baton!
+.END.
+
+^^ Dehors
+Les joueurs arrivent dehors. 
+.END.
